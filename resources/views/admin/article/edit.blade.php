@@ -15,7 +15,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ url('admin/article/',$article->id) }}" method="POST">
+                    <form action="{{ url('admin/article/'.$article->id) }}" method="POST">
                         {{method_field('PATCH')}}
                         {!! csrf_field() !!}
                         <input type="text" name="title" class="form-control" required="required" placeholder="请输入标题" value="{{$article->title}}">
